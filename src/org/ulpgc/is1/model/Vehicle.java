@@ -7,7 +7,7 @@ public class Vehicle {
     private String model;
     private Plate plate;
     private Costumer costumer;
-    private Repair repair;
+
 
     public Vehicle(String make, String model, Plate plate, Costumer costumer, Repair repair){
         this.make = make;
@@ -17,6 +17,7 @@ public class Vehicle {
         this.repair = repair;
     }
 
+    ///Añadir un metodo para eliminar vehiculos
 
     public String getMake() {
         return make;
@@ -48,13 +49,5 @@ public class Vehicle {
 
     public void setCostumer(Costumer costumer) {
         this.costumer = costumer;
-    }
-
-    public Repair getRepair() {
-        return repair;
-    }
-
-    public void setRepair(Repair repair) {
-        this.repair = repair;
     }
 }
