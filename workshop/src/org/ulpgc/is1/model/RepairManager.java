@@ -16,8 +16,8 @@ public class RepairManager {
     public void addVehicle(Vehicle vehicle ){vehicles.add(vehicle);}
 
     public Mechanic getMechanic(int index){
-       return  this.mechanics.get(index);
-        }
+        return  this.mechanics.get(index);
+    }
 
     public Vehicle getVehicle(int index){
         return this.vehicles.get(index);
