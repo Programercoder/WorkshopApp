@@ -1,11 +1,19 @@
-package org.ulpgc.is1.model;
+ackage org.ulpgc.is1.model;
 
 public class Costumer {
-    private final String juan;
-    private final Phone number;
+    private String nombre;
+    private Phone phone;
 
-    public Costumer(String juan, Phone number) {
-        this.juan = juan;
-        this.number = number;
+    public Costumer(String nombre, Phone phone) {
+        this.nombre = juan;
+        this.phone = phone;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Phone getPhone() {
+        return phone.getNumber();
     }
 }
