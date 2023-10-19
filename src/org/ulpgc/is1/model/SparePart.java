@@ -1,6 +1,6 @@
 package org.ulpgc.is1.model;
 import java.util.*;
-###Subir a git este archivo
+
 public class SparePart {
     private String name;
     private int price;
