@@ -4,22 +4,29 @@ public class RepairManager {
     ///Preguntar a la profe si se puede usar set ya que el mecanico no deberia repetirse
     private final ArrayList<Mechanic> MechanicList = new ArrayList<>();
     private final ArrayList<Vehicle> VehicleList = new ArrayList<>();
+    private final ArryList<SparePart> sparePart = new ArrayList<>();
 
 
 
-    //To do
+    //Preguntar al profe que hace exactamente el metodo repair
     public void repair(String part, int price) {
 
     }
 
-    ///Preguntar al profe si se debe usar composite aggregation
-    public void addMechanic(String name, String surname, Repair repair, Payment payment, BreakdownTypes breakdown){
-        MechanicList.add(new Mechanic(name, surname, repair, payment, breakdown));
+
+    public void addMechanic(String name, String surname){
+        MechanicList.add(new Mechanic(name, surname));
     }
 
-    ///Mirar sobre shared and composite aggregation
 
-    public void addVehicle(String make, String model, Plate plate, Costumer costumer, Phone phone) {
-        VehicleList.add(new Vehicle(make, model, plate, costumer, phone));
+
+    public void addVehicle(String make, String model, Plate plate, Costumer costumer) {
+        VehicleList.add(new Vehicle(make, model, plate, costumer);
     }
+
+    public void addSparePart(String name, int price){
+        VehicleList.add(new SparePart(name, price));
+    }
+
+
 }

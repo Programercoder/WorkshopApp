@@ -7,6 +7,7 @@ public class Vehicle {
     private String model;
     private Plate plate;
     private Costumer costumer;
+    private List<Repair> repair;
 
 
     public Vehicle(String make, String model, Plate plate, Costumer costumer, Repair repair){
@@ -14,10 +15,17 @@ public class Vehicle {
         this.model = model;
         this.plate = plate;
         this.costumer = costumer;
-        this.repair = repair;
+        this.repair = new ArrayList<Repair>();
+        repair.add(repair);
     }
 
-    ///Añadir un metodo para eliminar vehiculos
+    ///Metodo deleteRepair
+    public deleteReapir(int index){
+        if (index < 0 || index >= repair.size()) {
+            throw new IndexOutOfBoundsException("Índice fuera de rango");
+        }
+        return repair.remove(index);
+    }
 
     public String getMake() {
         return make;

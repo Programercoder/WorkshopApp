@@ -4,28 +4,20 @@ import java.util.*;
 public class SparePart {
     private String name;
     private int price;
-    private List<Item> item;
+
 
     public SaperePart(String name, int price, Item item){
         this.name = name;
         this.price = price;
-        this.item = new ArrayList<Item>();
     }
-
+    //Getter de name
     public String getName() {
         return name;
     }
-
+    ///Getter de price
     public int getPrice() {
         return price;
     }
 
-    public List<Item> getItems() {
-        return item;
-    }
 
-    public addItem(Repair repair, int quantity){
-        Item = new Item(this, reapir, quantity);
-        item.add(Item);
-    }
 }

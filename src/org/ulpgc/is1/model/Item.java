@@ -10,15 +10,15 @@ public class Item {
         this.repair = repair;
         this.quantity = quantity;
     }
-
+    ///Metodo getRepair
     public Repair getRepair(){
         return this.repair;
     }
-
+    ///Metodo getQuantity
     public int getQuantity() {
         return quantity;
     }
-
+    ///MetodoSparepart
     public SparePart getSparepart() {
         return Sparepart;
     }

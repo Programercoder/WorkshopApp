@@ -9,16 +9,16 @@ public class Phone {
     private Phone(String number){
         this.number = number;
     }
-
+    //getter de number
     public String getNumber() {
         return number;
     }
-
+    //Setter de number
     public void setNumber(String number) {
         this.number = number;
     }
 
-    //Falta comprobar el metodo isValue()
+    //Metodo isValid
     public boolean isValid(String number) {
         String valid = "\\d{9}";
         Pattern pattern = Pattern.compile(valid);

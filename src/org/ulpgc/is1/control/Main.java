@@ -1,26 +1,25 @@
 package org.ulpgc.is1.control.*;
-import model.ReapairManager;
-
 import org.ulpgc.is1.model.*;
 
 
-//No cree el main como lo pide en la practica cree uno para ir sacando las clases y los metodos
-//Falta hacerlo como lo pide en la practica
+///El profe comento un par de cosas sobre el main dijo que debemos usar los innits para crear las clases mecanicos
+/// y vehicles
 public class Main {
     private static void init(RepairManager workshop) {
-        ///Primer mecanico
+
+        ///Usar inits como pone en la diapositiva
         Repair repair1 = new Repair(Date "08-04-20022", "cambio aceite", 25 );
-        Mechanic mechanic1 = new Mechamic("Pepe", "Miranda", repair1);
+        Mechanic mechanic1 = new Mechamic("Pepe", "Miranda");
 
         ///segundo mecanico
         Repair repair2 = new Repair(Date "07-04-20022", "cambio de neumatico", 30 );
         Mechanic mechanic2 = new Mechamic("Pedro", "Marrero", repair2);
 
-        ///Primer vehiculo
-        Costumer Costumer1 = new Costumer("Mario", new Phone("345678901"))
-        Vehicle vehicle = new Vehicle("Glass", "Hilux", new Plate("GC20045"));
 
-        ///Piezas en el almacen
+        Costumer Costumer1 = new Costumer("Mario", new Phone("345678901"))
+        Vehicle vehicle = new Vehicle("Glass", "Hilux", "añadir costrumenew", Plate("GC20045"));
+
+
         SparePart part1 = new SparePart("Bumper", 200, new Item(1));
         SparePart part2 = new SparePart("Tire", 100, new Item(1));
 
