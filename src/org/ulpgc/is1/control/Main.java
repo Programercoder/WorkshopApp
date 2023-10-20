@@ -17,8 +17,9 @@ public class Main {
     }
 
     public static void init(RepairManager repairManager) {
-        repairManager.addVehicle("Oil change", "Hylux", )
-        List<Mechanic> mechanics = new ArrayList<>();
+        
+        repairManager.addVehicle("Oil change", "Hylux", new Plate("GC20035"), new Customer("Pedro", new Phone("658654234")));
+        repairManager.addVehicle("Glass change", "juke", new Plate("GC20034"), new Customer("Pablo", new Phone("658654235")));
         mechanics.add(mechanic1);
         new Repair(345, "Maletero", "65", mechanics, vehicle2);
         repairManager.addVehicle(vehicle1);

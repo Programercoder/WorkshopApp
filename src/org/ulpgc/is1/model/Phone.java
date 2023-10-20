@@ -23,6 +23,11 @@ public class Phone {
         String valid = "\\d{9}";
         Pattern pattern = Pattern.compile(valid);
         Matcher matcher = pattern.matcher(number);
-        return matcher.matches();
+        if (matcher.matches()) {
+            return true;
+        } else {
+            this.number = "XXXX";
+            return false;
+        }
     }
 }
