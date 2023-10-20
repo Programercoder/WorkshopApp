@@ -1,6 +1,7 @@
-package org.uplgc.is1.control;
+package org.ulggc.is1.control;
 
-import org.uplgc.is1.model.*;
+import org.ulpgc.is1.model.*;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,7 @@ public class Main {
     }
 
     public static void init(RepairManager repairManager) {
-
+        repairManager.addVehicle("Oil change", "Hylux", )
         List<Mechanic> mechanics = new ArrayList<>();
         mechanics.add(mechanic1);
         new Repair(345, "Maletero", "65", mechanics, vehicle2);

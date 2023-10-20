@@ -18,7 +18,7 @@ public class Plate {
     }
 
     public boolean isValid(String number) {
-        String valid = "^[A-Z]{1} \\d{2} [A-Z]{3}$";
+        String valid = "^[A-Z]{2}\\d{5}$";
         Pattern pattern = Pattern.compile(valid);
         Matcher matcher = pattern.matcher(number);
         return matcher.matches();
