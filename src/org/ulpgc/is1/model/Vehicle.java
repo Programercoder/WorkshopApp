@@ -11,21 +11,20 @@ public class Vehicle {
     private List<Repair> repair;
 
 
-    public Vehicle(String make, String model, Plate plate, Costumer costumer, Repair repair){
+    public Vehicle(String make, String model, Plate plate, Customer customer){
         this.make = make;
         this.model = model;
         this.plate = plate;
-        this.costumer = costumer;
+        this.owner = customer;
         this.repair = new ArrayList<Repair>();
-        repair.add(repair);
     }
 
     ///Metodo deleteRepair
-    public deleteReapir(int index){
+    public void deleteRepair(int index){
         if (index < 0 || index >= repair.size()) {
-            throw new IndexOutOfBoundsException("Índice fuera de rango");
+            throw new IndexOutOfBoundsException("Indice fuera de rango");
         }
-        return repair.remove(index);
+        repair.remove(index);
     }
 
     public String getMake() {
@@ -52,11 +51,16 @@ public class Vehicle {
         this.plate = plate;
     }
 
-    public Costumer getCostumer() {
-        return costumer;
+    public Customer getCostumer() {
+        return this.owner;
     }
 
-    public void setCostumer(Costumer costumer) {
-        this.costumer = costumer;
+
+    public List<Repair> getRepair() {
+        return repair;
+    }
+
+    public Customer getOwner() {
+        return owner;
     }
 }
