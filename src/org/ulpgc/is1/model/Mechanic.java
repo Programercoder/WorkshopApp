@@ -22,11 +22,8 @@ public class Mechanic {
         return name;
     }
 
-    public Repair getRepair(int index) {
-        if (index < 0 || index >= repair.size()) {
-            throw new IndexOutOfBoundsException("Índice fuera de rango");
-        }
-        return repair.get(index);
+    public List<Repair> getRepair(int index) {
+        return repair;
     }
 
     public addRepair(Repair reparation){
