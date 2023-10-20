@@ -27,14 +27,11 @@ public class Costumer {
     }
 
     ///Getter de vehicle
-    public Vehicle getVehicle(int index) {
-        if (index < 0 || index >= vehicle.size()) {
-            throw new IndexOutOfBoundsException("Índice fuera de rango");
-        }
-        return vehicle.get(index);
+    public List<Vehicle> getVehicle(Vehicle vehicle) {
+        return vehicle;
     }
     ///metodo deleteVehicle
-    public deleteVehicle(int index) {
+    public void deleteVehicle(int index) {
         if (index < 0 || index >= vehicle.size()) {
             throw new IndexOutOfBoundsException("Índice fuera de rango");
         }

@@ -1,4 +1,5 @@
 package org.ulpgc.is1.model;
+import java.util.*;
 
 public class Vehicle {
 
@@ -6,7 +7,7 @@ public class Vehicle {
     private String make;
     private String model;
     private Plate plate;
-    private Costumer costumer;
+    private Customer owner;
     private List<Repair> repair;
 
 

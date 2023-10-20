@@ -6,7 +6,7 @@ public class SparePart {
     private int price;
 
 
-    public SaperePart(String name, int price, Item item){
+    public SparePart(String name, int price){
         this.name = name;
         this.price = price;
     }

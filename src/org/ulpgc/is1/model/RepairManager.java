@@ -2,9 +2,9 @@ package org.ulpgc.is1.model;
 import java.util.*;
 public class RepairManager {
     ///Preguntar a la profe si se puede usar set ya que el mecanico no deberia repetirse
-    private final ArrayList<Mechanic> MechanicList = new ArrayList<>();
-    private final ArrayList<Vehicle> VehicleList = new ArrayList<>();
-    private final ArryList<SparePart> sparePart = new ArrayList<>();
+    private  ArrayList<Mechanic> MechanicList = new ArrayList<>();
+    private  ArrayList<Vehicle> VehicleList = new ArrayList<>();
+    private  ArrayList<SparePart> SparePartList = new ArrayList<>();
 
 
 
@@ -20,13 +20,24 @@ public class RepairManager {
 
 
 
-    public void addVehicle(String make, String model, Plate plate, Costumer costumer) {
-        VehicleList.add(new Vehicle(make, model, plate, costumer);
+    public void addVehicle(String make, String model, Plate plate, Customer customer) {
+        VehicleList.add(new Vehicle(make, model, plate, customer));
     }
 
     public void addSparePart(String name, int price){
-        VehicleList.add(new SparePart(name, price));
+        SparePartList.add(new SparePart(name, price));
     }
 
 
+    public ArrayList<Mechanic> getMechanic() {
+        return MechanicList;
+    }
+
+    public ArrayList<Vehicle> getVehicle() {
+        return VehicleList;
+    }
+
+    public ArrayList<SparePart> getSparePart() {
+        return SparePartList;
+    }
 }

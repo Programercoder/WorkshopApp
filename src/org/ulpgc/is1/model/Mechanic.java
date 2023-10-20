@@ -1,17 +1,16 @@
 package org.ulpgc.is1.model;
 import java.util.*;
-import
+
 
 public class Mechanic {
     private String name;
     private String surname;
     private List<Repair> repair;
 
-    public Mechanic(String name, String surname, Repair repair){
+    public Mechanic(String name, String surname){
         this.name = name;
         this.surname = surname;
         this.repair = new ArrayList<Repair>();
-        repair.addRepair(repair);
     }
 
     public String getSurname() {
@@ -26,14 +25,14 @@ public class Mechanic {
         return repair;
     }
 
-    public addRepair(Repair reparation){
+    public void addRepair(Repair reparation){
         repair.add(reparation);
     }
 
-    public deleteRepair(int index) {
+    public void deleteRepair(int index) {
         if (index < 0 || index >= repair.size()) {
             throw new IndexOutOfBoundsException("Índice fuera de rango");
         }
-        return repair.remove(index);
+        repair.remove(index);
     }
 }
