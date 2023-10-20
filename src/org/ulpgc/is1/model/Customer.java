@@ -27,8 +27,8 @@ public class Customer {
     }
 
     ///Getter de vehicle
-    public List<Vehicle> getVehicle(int index) {
-        return vehicleList.get(index);
+    public List<Vehicle> getVehicle() {
+        return vehicleList;
     }
     ///metodo deleteVehicle
     public void deleteVehicle(int index) {
