@@ -9,8 +9,8 @@ public class RepairManager {
 
 
     //Preguntar al profe que hace exactamente el metodo repair
-    public void repair(String part, int price) {
-
+    public void repair(String name, int price) {
+        SparePartList.add(new SparePart(name, price));
     }
 
 
@@ -41,3 +41,4 @@ public class RepairManager {
         return SparePartList;
     }
 }
+
