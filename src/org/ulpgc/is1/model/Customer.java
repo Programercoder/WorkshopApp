@@ -6,11 +6,10 @@ public class Customer {
     private Phone phone;
     private List<Vehicle> vehicleList;
 
-    public Customer(String nombre, Phone phone, Vehicle vehicle) {
+    public Customer(String nombre, Phone phone) {
         this.nombre = nombre;
         this.phone = phone;
         this.vehicleList = new ArrayList<Vehicle>();
-        vehicleList.add(vehicle);
     }
     ///Getter de Nombre
     public String getNombre() {
