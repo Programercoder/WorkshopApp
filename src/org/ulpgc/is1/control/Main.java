@@ -13,7 +13,7 @@ public class Main {
         // Inyectar información al modelo mediante el método init
         init(repairManager);
         System.out.println(((Mechanic)repairManager.getMechanic().get(0).getMechanic()));
-        System.out.println(((Vehicle)repairManager.getVehicle().get(1).getVehicle()));
+        System.out.println("Los datos del segundo vehiculo son Make: " +  repairManager.getVehicle().get(1).getName() + ", Model: " + repairManager.getVehicle().get(1)).getModel() + ", Plate: " + repairManager.getVehicle().get(1)).getPlate().getNumber() + ", Customer name and phone: " + repairManager.getVehicle().get(1)).getOwner().getName() + ", " + repairManager.getVehicle().get(1)).getOwner().getPhone().getNumber());
     }
 
     public static void init(RepairManager repairManager) {
