@@ -13,6 +13,10 @@ public class RepairManager {
         SparePartList.add(new SparePart(name, price));
     }
 
+    public int countVehicle(){
+        return VehicleList.size();
+    }
+
 
     public void addMechanic(String name, String surname){
         MechanicList.add(new Mechanic(name, surname));
@@ -41,4 +45,5 @@ public class RepairManager {
         return SparePartList;
     }
 }
+
 
