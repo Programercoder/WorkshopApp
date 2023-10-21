@@ -17,6 +17,13 @@ public class RepairManager {
         return VehicleList.size();
     }
 
+    public void removeVehicle(int index) {
+        if (index < 0 || index >= VehicleList.size()) {
+            throw new IndexOutOfBoundsException("Indice fuera de rango");
+        }
+        VehicleList.remove(index);
+    }
+
 
     public void addMechanic(String name, String surname){
         MechanicList.add(new Mechanic(name, surname));
