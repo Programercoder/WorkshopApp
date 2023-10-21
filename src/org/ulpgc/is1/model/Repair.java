@@ -11,37 +11,31 @@ public class Repair {
     private List<BreakdownTypes> breakdownTypesList;
     private Payment payment;
     private Vehicle vehicle;
-    private List<Mechanic> mechanic;
-    private List<Item> item;
+    private List<Mechanic> mechanicList;
+    private List<Item> itemList;
 
     ///Inicializador sin parametro payment
-    public Repair(Date date, String description, int effort, BreakdownTypes breakdownTypes, Vehicle vehicle,Mechanic Mechanic, Item Item) {
+    public Repair(Date date, String description, int effort,Vehicle vehicle) {
         this.id = NEXT_ID++;
         this.date = date;
         this.description = description;
         this.effort = effort;
         this.breakdownTypesList = new ArrayList<BreakdownTypes>();
-        breakdownTypesList.add(breakdownTypes);
         this.vehicle = vehicle;
-        this.item = new ArrayList<Item>();
-        item.add(Item);
-        this.mechanic = new ArrayList<Mechanic>();
-        mechanic.add(Mechanic);
+        this.itemList = new ArrayList<Item>();
+        this.mechanicList = new ArrayList<Mechanic>();
 
     }
     ///Inicializador con parametro payment
-    public Repair(Date date, String description, int effort, BreakdownTypes breakdownTypes, Vehicle vehicle,Mechanic Mechanic, Item Item, Payment payment) {
+    public Repair(Date date, String description, int effort, Vehicle vehicle, Payment payment) {
         this.id = NEXT_ID++;
         this.date = date;
         this.description = description;
         this.effort = effort;
         this.breakdownTypesList = new ArrayList<BreakdownTypes>();
-        breakdownTypesList.add(breakdownTypes);
         this.vehicle = vehicle;
-        this.mechanic = new ArrayList<Mechanic>();
-        mechanic.add(Mechanic);
-        this.item = new ArrayList<Item>();
-        item.add(Item);
+        this.mechanicList = new ArrayList<Mechanic>();
+        this.itemList = new ArrayList<Item>();
         this.payment = payment;
 
     }
@@ -94,14 +88,27 @@ public class Repair {
     }
 
     ///getter de mechanic
-    public List<Mechanic> getMechanic() {
-        return mechanic;
+    public List<Mechanic> getMechanicList() {
+        return mechanicList;
     }
 
     ///Getter de items
     public List<Item> getItems(int index) {
-        return item;
+        return itemList;
     }
 
+    ///Metodo addMechanic
+    public void addMechanic(Mechanic mechanic){
+        mechanicList.add(mechanic);
+    }
 
+    ///Metodo addItems
+    public void addItem(Item item){
+        itemList.add(item);
+    }
+
+    ///Metodo addBreakdownTypes
+    public void addBreakdownTypes(BreakdownTypes Type){
+        breakdownTypesList.add(Type);
+    }
 }
