@@ -2,18 +2,18 @@ package org.ulpgc.is1.model;
 import java.util.*;
 
 public class Customer {
-    private String nombre;
+    private String name;
     private Phone phone;
     private List<Vehicle> vehicleList;
 
-    public Customer(String nombre, Phone phone) {
-        this.nombre = nombre;
+    public Customer(String name, Phone phone) {
+        this.name = name;
         this.phone = phone;
         this.vehicleList = new ArrayList<Vehicle>();
     }
     ///Getter de Nombre
-    public String getNombre() {
-        return this.nombre;
+    public String getName() {
+        return this.name;
     }
     ///Getter de Phone
     public Phone getPhone() {
