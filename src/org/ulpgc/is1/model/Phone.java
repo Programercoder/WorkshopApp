@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 public class Phone {
     private String number;
 
-    private Phone(String number){
+    public Phone(String number){
         this.number = number;
     }
     //getter de number
