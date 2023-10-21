@@ -1,35 +1,44 @@
 package org.uplgc.is1.control;
 
-import org.uplgc.is1.model.Mechanic;
-import org.uplgc.is1.model.Vehicle;
+
+import org.uplgc.is1.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepairManager {
+     List<Vehicle> vehicles;
+     List<Mechanic> mechanics;
+     List<Customer> customers;
+
 
     public RepairManager() {
         this.vehicles = new ArrayList<>();
         this.mechanics = new ArrayList<>();
+        this.customers = new ArrayList<>();
+    }
+    public boolean addCustomer(String name, Phone phone){
+        Customer customer = new Customer(name, phone);
+        return this.customers.add(customer);
+    }
+    public Vehicle getVehicles(int index) {
+        return this.vehicles.get(index);
     }
 
-    public List<Vehicle> getVehicles() {
-        return vehicles;
+    public Mechanic getMechanics(int index) {
+        return this.mechanics.get(index);
     }
 
-    public List<Mechanic> getMechanics() {
-        return mechanics;
+    public void addVehicle(String make, String model, Plate plate){
+        Vehicle vehicle = new Vehicle(make, model, plate);
+        this.vehicles.add(vehicle);
     }
 
-    List<Vehicle> vehicles;
-    List<Mechanic> mechanics;
-
-    public void addVehicle(Vehicle vehicle1) {
-        this.vehicles.add(vehicle1);
-    }
-
-    public void addMechanic(Mechanic mechanic) {
+    public void addMechanic(String name, String surname) {
+        Mechanic mechanic = new Mechanic(name, surname);
         this.mechanics.add(mechanic);
     }
+
+    //public void Repair(BreakdownTypes breakdownTypes){}
 }
 

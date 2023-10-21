@@ -1,4 +1,5 @@
 package org.uplgc.is1.model;
+import java.util.List;
 
 public class Customer {
     private String name;

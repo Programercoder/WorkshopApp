@@ -6,13 +6,28 @@ import java.util.List;
 public class Repair {
     private static int NEXT_ID = 0;
     private final int id;
-    private Date date;
-    private String description;
-    private int effort;
-    
+    private final Date date;
+    private final String description;
+    private final int effort;
+    private final List<Item> items;
+    private final Payment payment;
 
 
-    public Repair(BreakdownTypes breakdownTypes, int i, int id, List<Mechanic> mechanics, Vehicle vehicle2) {
-        this.id = 0;
+    public Repair(Date date, String description, int effort, List<Item> items, Payment payment) {
+        this.id = NEXT_ID++;
+        this.date = date;
+        this.description = description;
+        this.effort = effort;
+        this.items = items;
+        this.payment = payment;
     }
+
+    public int price() {
+        int totalPrice = 0;
+        for (Item item : items) {
+            totalPrice += item.getSparePart().getPrice() * item.getQuantity();
+        }
+        return totalPrice;
+    }
+
 }
