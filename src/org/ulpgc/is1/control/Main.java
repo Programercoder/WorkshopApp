@@ -17,8 +17,21 @@ public class Main {
         System.out.println("Los datos del primer mecanico son: " + repairManager.getMechanic().get(0).getName() + " " + repairManager.getMechanic().get(0).getSurname());
         System.out.println("Los datos del segundo vehiculo son Make: " +  repairManager.getVehicle().get(1).getMake() + ", Model: " + repairManager.getVehicle().get(1).getModel() + ", Plate: " + repairManager.getVehicle().get(1).getPlate().getNumber() + ", Customer name and phone: " + repairManager.getVehicle().get(1).getOwner().getName() + ", " + repairManager.getVehicle().get(1).getOwner().getPhone().getNumber());
 
+        ///Reparation
+        Repair repair =  new Repair(new Date(2023,12,5), "Bumper and exhaust pipe reparation", 300, repairManager.getVehicle().get(1));
+        SparePart part1 = repairManager.getSparePart().get(0);
+        SparePart part2 = repairManager.getSparePart().get(1);
+        repair.addItem(new Item(part1, repair, 1200));
+        repair.addBreakdownTypes(BreakdownTypes.mechanical);
+        repairManager.getMechanic().get(0).addRepair(repair);
+
+        ///formalization of the payment
+        repairManager.getMechanic().get(0).getRepair().get(0).price(new Date(2023,12,20), 500);
+        
         ///Delete the first Vehicle
         repairManager.removeVehicle(0);
+
+        ///Number of vehicles in the workshop
         System.out.println("Number of vehicles: " + repairManager.countVehicle());
     }
 
