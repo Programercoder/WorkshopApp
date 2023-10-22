@@ -12,7 +12,8 @@ public class Main {
 
         // Inyectar información al modelo mediante el método init
         init(repairManager);
-        ///First mechanic and second vehicle data
+        
+        ///Data of the first mechanic and the second vehicle 
         System.out.println("Los datos del primer mecanico son: " + repairManager.getMechanic().get(0).getName() + " " + repairManager.getMechanic().get(0).getSurname());
         System.out.println("Los datos del segundo vehiculo son Make: " +  repairManager.getVehicle().get(1).getMake() + ", Model: " + repairManager.getVehicle().get(1).getModel() + ", Plate: " + repairManager.getVehicle().get(1).getPlate().getNumber() + ", Customer name and phone: " + repairManager.getVehicle().get(1).getOwner().getName() + ", " + repairManager.getVehicle().get(1).getOwner().getPhone().getNumber());
 
