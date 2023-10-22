@@ -13,8 +13,10 @@ public class Payment {
         this.ammount = ammount;
     }
 
-    public Date getDate() {
-        return date;
+    public String getDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy MM dd");
+        String formated = dateFormat.format(this.date);
+        return formated;
     }
 
     public void setDate(Date date) {
