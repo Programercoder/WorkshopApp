@@ -1,4 +1,4 @@
-package org.ulggc.is1.control;
+package org.ulpgc.is1.control;
 
 import org.ulpgc.is1.model.*;
 
