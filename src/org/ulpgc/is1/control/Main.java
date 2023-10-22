@@ -22,8 +22,8 @@ public class Main {
         System.out.println("Number of vehicles: " + repairManager.countVehicle());
     }
 
+    ///Repair innit
     public static void init(RepairManager repairManager) {
-        ///Seguir con esto
         repairManager.addMechanic("Rick", "Sanchez");
         repairManager.addMechanic("Hernesto", "Figueroa");
         repairManager.addVehicle("Oil change", "Hylux", new Plate("GC20035"), new Customer("Pedro", new Phone("658654235")));
