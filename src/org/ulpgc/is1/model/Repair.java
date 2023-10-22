@@ -1,6 +1,7 @@
 package org.ulpgc.is1.model;
 import java.util.*;
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class Repair {
     private static int NEXT_ID = 0;
@@ -26,19 +27,7 @@ public class Repair {
         this.mechanicList = new ArrayList<Mechanic>();
 
     }
-    ///Inicializador con parametro payment
-    public Repair(Date date, String description, int effort, Vehicle vehicle, Payment payment) {
-        this.id = NEXT_ID++;
-        this.date = date;
-        this.description = description;
-        this.effort = effort;
-        this.breakdownTypesList = new ArrayList<BreakdownTypes>();
-        this.vehicle = vehicle;
-        this.mechanicList = new ArrayList<Mechanic>();
-        this.itemList = new ArrayList<Item>();
-        this.payment = payment;
 
-    }
     ///Getter de description
     public String getDescription() {
         return description;
@@ -48,8 +37,10 @@ public class Repair {
         this.description = description;
     }
     ///Getter de Date
-    public Date getDate() {
-        return date;
+    public String getDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy MM dd");
+        String formated = dateFormat.format(this.date);
+        return formated;
     }
 
     public void setDate(Date date) {
@@ -112,8 +103,8 @@ public class Repair {
         breakdownTypesList.add(Type);
     }
 
-    //Price method
     public void price(Date date, int amount) {
         this.payment = new Payment(date, amount);
     }
 }
+
