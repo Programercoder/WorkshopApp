@@ -111,4 +111,9 @@ public class Repair {
     public void addBreakdownTypes(BreakdownTypes Type){
         breakdownTypesList.add(Type);
     }
+
+    //Price method
+    public void price(Date date, int amount) {
+        this.payment = new Payment(date, amount);
+    }
 }
