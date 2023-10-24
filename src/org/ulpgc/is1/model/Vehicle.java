@@ -70,7 +70,7 @@ public class Vehicle {
     }
 
     ///setOwner method
-    public setOuner(Customer name){
+    public void setOuner(Customer name){
         this.owner = name; 
     }
         
