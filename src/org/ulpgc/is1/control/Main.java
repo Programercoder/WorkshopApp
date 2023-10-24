@@ -35,7 +35,7 @@ public class Main {
         repairManager.removeVehicle(0);
 
         ///Number of vehicles in the workshop
-        System.out.println("Number of vehicles: " + repairManager.countVehicle());
+        System.out.println("Number of vehicles in workshop: " + repairManager.countVehicle());
 
         ///Data of the reparation
         System.out.println("Data of the reparation: Date: "+repairManager.getMechanic().get(0).getRepair().get(0).getDate() + " Description: "+ repairManager.getMechanic().get(0).getRepair().get(0).getDescription()+", Effort: "+repairManager.getMechanic().get(0).getRepair().get(0).getEffort()+", Vehicle,  Make, model, plate and Customer name and phone:  "+repairManager.getMechanic().get(0).getRepair().get(0).getVehicle().getMake()+" ,"+repairManager.getMechanic().get(0).getRepair().get(0).getVehicle().getModel()+" ,"+repairManager.getMechanic().get(0).getRepair().get(0).getVehicle().getPlate().getNumber()+" "+repairManager.getMechanic().get(0).getRepair().get(0).getVehicle().getOwner().getName()+" ,"+repairManager.getMechanic().get(0).getRepair().get(0).getVehicle().getOwner().getPhone().getNumber());
