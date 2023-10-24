@@ -9,7 +9,7 @@ public class Plate {
 
     ///Constructor
     public Plate(String number) {
-        if isValid(number){
+        if (isValid(number)){
             this.number = number;
         }
         else {
