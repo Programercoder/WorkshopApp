@@ -1,6 +1,7 @@
 package org.ulpgc.is1.model;
 
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class Payment {
 
