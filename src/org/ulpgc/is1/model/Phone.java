@@ -19,7 +19,7 @@ public class Phone {
         
     //getter of number
     public String getNumber() {
-        return number;
+        return this.number;
     }
     //Setter of number
     public void setNumber(String number) {
