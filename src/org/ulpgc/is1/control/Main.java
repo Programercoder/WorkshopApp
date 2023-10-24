@@ -26,6 +26,7 @@ public class Main {
         repair.addItem(new Item(part1, repair, 1200));
         repair.addItem(new Item(part2, repair, 5000));
         repair.addBreakdownTypes(BreakdownTypes.mechanical);
+        repair.addMechanic(repairManager.getMechanic().get(0));
         repairManager.getMechanic().get(0).addRepair(repair);
 
         ///formalization of the payment
