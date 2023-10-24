@@ -15,6 +15,7 @@ public class Phone {
         }
         else {
             this.number = "XXXX";
+        }
     }
         
     //getter of number
@@ -31,10 +32,6 @@ public class Phone {
         String valid = "\\d{9}";
         Pattern pattern = Pattern.compile(valid);
         Matcher matcher = pattern.matcher(number);
-        if (matcher.matches()) {
-            return true;
-        } else {
-            return false;
-        }
+        return matcher.matches();
     }
 }
