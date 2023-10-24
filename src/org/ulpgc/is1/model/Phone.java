@@ -10,7 +10,7 @@ public class Phone {
 
     ///Phone constructor
     public Phone(String number){
-        if isValid(number) {    
+        if (isValid(number)) {    
             this.number = number;
         }
         else {
