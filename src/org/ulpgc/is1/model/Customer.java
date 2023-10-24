@@ -2,10 +2,13 @@ package org.ulpgc.is1.model;
 import java.util.*;
 
 public class Customer {
+
+    ///Atributes
     private String name;
     private Phone phone;
     private List<Vehicle> vehicleList;
 
+    ///Constructor
     public Customer(String name, Phone phone) {
         this.name = name;
         this.phone = phone;
@@ -20,16 +23,16 @@ public class Customer {
         return phone;
     }
 
-    ///Metoso addVehicle
+    ///addVehicle method
     public void addVehicle(Vehicle vehicle){
         vehicleList.add(vehicle);
     }
 
-    ///Getter de vehicle
+    ///getVehicle method
     public List<Vehicle> getVehicle() {
         return vehicleList;
     }
-    ///metodo deleteVehicle
+    ///deleteVehicle method
     public void deleteVehicle(int index) {
         if (index < 0 || index >= vehicleList.size()) {
             throw new IndexOutOfBoundsException("Índice fuera de rango");
