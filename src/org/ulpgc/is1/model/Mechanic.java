@@ -27,7 +27,7 @@ public class Mechanic {
     }
 
     ///getRepair method
-    public List<Repair> getRepair(int index) {
+    public List<Repair> getRepair() {
         return repair;
     }
 
