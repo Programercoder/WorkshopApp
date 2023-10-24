@@ -84,7 +84,7 @@ public class Repair {
     }
 
     ///Getter de items
-    public List<Item> getItems(int index) {
+    public List<Item> getItems() {
         return itemList;
     }
 
