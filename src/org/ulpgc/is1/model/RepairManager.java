@@ -1,14 +1,14 @@
 package org.ulpgc.is1.model;
 import java.util.*;
 public class RepairManager {
-    ///Preguntar a la profe si se puede usar set ya que el mecanico no deberia repetirse
+    
     private  ArrayList<Mechanic> MechanicList = new ArrayList<>();
     private  ArrayList<Vehicle> VehicleList = new ArrayList<>();
     private  ArrayList<SparePart> SparePartList = new ArrayList<>();
 
 
 
-    //Preguntar al profe que hace exactamente el metodo repair
+   
     public void repair(String name, int price) {
         SparePartList.add(new SparePart(name, price));
     }
