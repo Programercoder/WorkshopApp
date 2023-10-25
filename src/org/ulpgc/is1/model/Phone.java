@@ -2,7 +2,7 @@ package org.ulpgc.is1.model;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-///Preguntar sobre clases primitivas
+
 public class Phone {
 
     ///Atributes
